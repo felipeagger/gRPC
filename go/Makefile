@@ -6,5 +6,9 @@ build:
 	@go build -o binary main.go
 
 run:
-	@echo "---- Running Application ----"
+	@echo "---- Running Server ----"
 	@go run main.go
+
+run_client:
+	@echo "---- Running Client ----"
+	@go run client.go

@@ -1,5 +1,5 @@
 # gRPC
-Demo gRPC Project with Golang
+Demo gRPC Project with Golang and Python
 
 Server and Client communication.
 
@@ -29,12 +29,15 @@ message UserResponse {
 
 # Running 
 
+Golang running on Port 8200.
+Python running on Port 8300.
+
 ```
 //Server
 make run
 
 //client
-go run go/client.go
+make run_client
 ```
 
 # Installation required:

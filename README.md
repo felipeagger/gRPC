@@ -3,7 +3,7 @@ Demo gRPC Project with Golang and Python
 
 Server and Client communication.
 
-# ProtoBuff model
+# ProtoBuf model
 
 ```
 syntax = "proto3";
@@ -30,6 +30,7 @@ message UserResponse {
 # Running 
 
 Golang running on Port 8200.
+
 Python running on Port 8300.
 
 ```

@@ -3,6 +3,23 @@ Demo gRPC Project with Golang and Python
 
 Server and Client communication.
 
+# Pontos positivos
+
+- Usa HTTP/2 que é muito mais rápido que o HTTP/1.1 usado no REST por padrão.
+
+- Usa o protobuf para serializar dados, trafegando-os em binários.
+
+- gRPC possui streaming de dados, e é bidirecional;
+
+# Pontos Negativos
+
+- Nao suporta comunicacao com Browsers (é mais indicado o uso entre servicos)
+
+- Por trafegar os dados em binários, nao são legiveis aos humanos
+
+- Necessita de schemas pre-definidos
+
+
 # ProtoBuf model
 
 ```
@@ -86,3 +103,7 @@ repos: 17
 
 ProtoBuff/Protoc
 http://google.github.io/proto-lens/installing-protoc.html
+
+# Links
+
+https://developers.google.com/protocol-buffers

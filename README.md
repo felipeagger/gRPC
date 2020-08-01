@@ -23,7 +23,15 @@ message UserResponse {
   string username = 3;
   string avatarurl = 4;
   string location = 5;
-  int64 repos = 6; 
+  Statistics statistics = 6;
+  repeated string listURLs = 7;
+}
+
+message Statistics {
+  int64 followers = 1; 
+  int64 following = 2; 
+  int64 repos = 3; 
+  int64 gists = 4; 
 }
 ```
 
@@ -52,7 +60,15 @@ name: "Filipe Alves"
 username: "felipeagger" 
 avatarurl: "https://avatars0.githubusercontent.com/u/43504172?v=4" 
 location: "Blumenau - SC / Brazil" 
-repos:17
+statistics: {
+  followers:8  
+  following:4  
+  repos:19  
+  gists:1
+}
+listURLs: ["https://api.github.com/users/felipeagger", 
+           "https://api.github.com/users/felipeagger/starred", 
+           "https://api.github.com/users/felipeagger/repos"]
 ```
 
 Python

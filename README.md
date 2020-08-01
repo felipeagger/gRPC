@@ -5,7 +5,7 @@ Server and Client communication.
 
 # Pontos positivos
 
-- Usa HTTP/2 que é muito mais rápido que o HTTP/1.1 usado no REST por padrão.
+- Estrutura RPC leve e de alto desempenho. Alem de usar HTTP/2 que é muito mais rápido que o HTTP/1.1 usado no REST padrão.
 
 - Usa o protobuf para serializar dados, trafegando-os em binários.
 
@@ -16,8 +16,6 @@ Server and Client communication.
 - Nao suporta comunicacao com Browsers (é mais indicado o uso entre servicos)
 
 - Por trafegar os dados em binários, nao são legiveis aos humanos
-
-- Necessita de schemas pre-definidos
 
 
 # ProtoBuf model

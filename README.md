@@ -3,6 +3,10 @@ Demo gRPC Project with Golang and Python
 
 Server and Client communication.
 
+**Golang com gRPC - Comunicação entre micro-serviços**
+
+[![YouTube Video Explanation](http://img.youtube.com/vi/2b_4QA6D1qw/0.jpg)](http://www.youtube.com/watch?v=2b_4QA6D1qw "Golang com gRPC - Comunicação entre micro-serviços")
+
 # Pontos positivos
 
 - Estrutura RPC leve e de alto desempenho. Alem de usar HTTP/2 que é muito mais rápido que o HTTP/1.1 usado no REST padrão.

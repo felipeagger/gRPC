@@ -7,7 +7,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"felipeagger/gRPC/user"
+	user "felipeagger/gRPC/proto/gen"
 )
 
 func main() {

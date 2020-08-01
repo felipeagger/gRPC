@@ -1,7 +1,7 @@
 package main
 
 import (
-	"felipeagger/gRPC/user"
+	user "felipeagger/gRPC/proto/gen"
 	"log"
 	"net"
 
@@ -15,7 +15,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 
-	usr := user.Server{}
+	usr := Server{}
 
 	grpcServer := grpc.NewServer()
 

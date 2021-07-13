@@ -1,5 +1,7 @@
 syntax = "proto3";
-package user;
+package protos;
+
+option go_package = "data/protos";
 
 service UserService {
   rpc GetUser(UserRequest) returns (UserResponse) {}

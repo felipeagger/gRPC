@@ -7,7 +7,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"felipeagger/gRPC/user"
+	"felipeagger/gRPC/pb/data/protos"
 )
 
 func main() {
@@ -20,13 +20,13 @@ func main() {
 	}
 	defer conn.Close()
 
-	usr := user.NewUserServiceClient(conn)
+	usr := protos.NewUserServiceClient(conn)
 
 	fmt.Print("Enter the UserName: ")
 	var inputUser string
 	fmt.Scanln(&inputUser)
 
-	response, err := usr.GetUser(context.Background(), &user.UserRequest{Username: inputUser})
+	response, err := usr.GetUser(context.Background(), &protos.UserRequest{Username: inputUser})
 	if err != nil {
 		log.Fatalf("Error when calling GetUser: %s", err)
 	}

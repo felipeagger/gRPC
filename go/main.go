@@ -1,6 +1,7 @@
 package main
 
 import (
+	"felipeagger/gRPC/pb/data/protos"
 	"felipeagger/gRPC/user"
 	"log"
 	"net"
@@ -19,7 +20,7 @@ func main() {
 
 	grpcServer := grpc.NewServer()
 
-	user.RegisterUserServiceServer(grpcServer, &usr)
+	protos.RegisterUserServiceServer(grpcServer, &usr)
 
 	log.Println("Listening on Port: 8200!")
 

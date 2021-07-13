@@ -1,5 +1,6 @@
 generate:
-	@protoc --go_out=plugins=grpc:user user.proto
+	#@protoc --go_out=plugins=grpc:user user.proto
+	@protoc --go_out=plugins=grpc:pb user.proto
 
 build:
 	@echo "---- Building Application ----"

@@ -7,6 +7,8 @@ import (
 	"log"
 	"net/http"
 
+	"felipeagger/gRPC/pb/data/protos"
+
 	"golang.org/x/net/context"
 )
 
@@ -25,7 +27,7 @@ type user struct {
 // felipeagger
 
 //GetUser is get user on github
-func (s *Server) GetUser(ctx context.Context, in *UserRequest) (*UserResponse, error) {
+func (s *Server) GetUser(ctx context.Context, in *protos.UserRequest) (*protos.UserResponse, error) {
 	log.Printf("Receive message from client: %s", in.Username)
 
 	res, err := http.Get(fmt.Sprintf("https://api.github.com/users/%v", in.Username))
@@ -44,7 +46,7 @@ func (s *Server) GetUser(ctx context.Context, in *UserRequest) (*UserResponse, e
 		log.Fatal(jsonErr)
 	}
 
-	return &UserResponse{
+	return &protos.UserResponse{
 		Id:        usr.ID,
 		Name:      usr.Name,
 		Username:  usr.Username,
